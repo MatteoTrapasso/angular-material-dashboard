@@ -1,0 +1,54 @@
+<style>
+  input[type=text], select {
+    width: 100%;
+    padding: 5px 5px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: large;
+  }
+
+  label{
+    font-size: large;
+  }
+  label#bmi {
+    white-space: nowrap;
+    width: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+  }
+
+</style>
+<div class="p-d-flex p-jc-center">
+  <div class="p-mr-2">
+    <b><h1>CHECK YOUR BMI <i class="pi pi-fw pi-sliders-v"></i></h1></b>
+    <div class="p-field p-grid">
+      <label for="height" class="p-col-fixed" style="width:120px">Height (cm)</label>
+      <div class="p-col">
+        <input id="height" type="text" pInputText>
+      </div>
+    </div>
+    <div class="p-field p-grid">
+      <label for="weight" class="p-col-fixed" style="width:120px">Weight (kg)</label>
+      <div class="p-col">
+        <input id="weight" type="text" pInputText>
+      </div>
+    </div>
+    <div class="p-field p-grid">
+      <label class="p-col-fixed" style="width:120px">BMI</label>
+      <div class="p-col">
+        <label id="bmi">{{BMI$ | async}}</label>
+      </div>
+    </div>
+    <div class="p-field p-grid">
+      <label class="p-col-fixed" style="width:120px">range:</label>
+      <div class="p-col">
+        <label>{{result$ | async}}</label>
+      </div>
+    </div>
+
+  </div>
+</div>
