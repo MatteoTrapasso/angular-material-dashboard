@@ -5,16 +5,16 @@ import { MatTableDataSource, MatPaginator } from '@angular/material';
 export interface PeriodicElement {
   name: string;
   position: number;
-  weight: string;
-  symbol: string;
+  value: string;
+  unit: string;
 }
 const ELEMENT_DATA: PeriodicElement[] = [
-  { position: 1, name: 'Altezza', weight: '190', symbol: 'cm' },
-  { position: 2, name: 'Peso', weight: '97', symbol: 'Kg' },
-  { position: 3, name: 'Età', weight: '23', symbol: 'anni' },
-  { position: 4, name: 'BMI', weight: '25', symbol: '%' },
-  { position: 5, name: 'Range', weight: 'sovrappeso', symbol: '' },
-  { position: 6, name: 'Target', weight: '-10', symbol: 'Kg' },
+  { position: 1, name: 'Altezza', value: '190', unit: 'cm' },
+  { position: 2, name: 'Peso', value: '97', unit: 'Kg' },
+  { position: 3, name: 'Età', value: '23', unit: 'anni' },
+  { position: 4, name: 'BMI', value: '25', unit: '%' },
+  { position: 5, name: 'Range', value: 'sovrappeso', unit: '' },
+  { position: 6, name: 'Target', value: '-10', unit: 'Kg' },
 
 ];
 
@@ -29,7 +29,7 @@ export class DashboardComponent implements OnInit {
   cards = [];
   pieChart = [];
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['name', 'value', 'unit'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
