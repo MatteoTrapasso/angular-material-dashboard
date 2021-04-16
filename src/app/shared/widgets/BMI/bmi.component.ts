@@ -3,11 +3,11 @@ import {combineLatest, fromEvent, Observable} from 'rxjs';
 import {debounceTime, map, pluck} from 'rxjs/operators';
 
 @Component({
-  selector: 'app-calculator-main',
-  templateUrl: 'calculator-main.component.html',
+  selector: 'app-bmi-component',
+  templateUrl: 'bmi.component.html',
   styles: []
 })
-export class CalculatorMainComponent implements OnInit {
+export class BmiComponent implements OnInit {
   public BMI$: Observable<number>;
   public result$: Observable<string>;
 

@@ -10,9 +10,9 @@
 
 <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
     <mat-card fxFlex="25">
-        <app-widget-card label="New Users" total="12k" percentage="50" [data]="cards"></app-widget-card>
+        <app-widget-card label="PESO" total="90" percentage="90" [data]="cards"></app-widget-card>
     </mat-card>
-    <mat-card fxFlex="25">
+    <!--<mat-card fxFlex="25">
         <app-widget-card label="Users retention" total="10k" percentage="40" [data]="cards"></app-widget-card>
     </mat-card>
     <mat-card fxFlex="25">
@@ -20,7 +20,7 @@
     </mat-card>
     <mat-card fxFlex="25">
         <app-widget-card label="Referral" total="6k" percentage="20" [data]="cards"></app-widget-card>
-    </mat-card>
+    </mat-card>-->
 </div>
 
 <br>
@@ -29,9 +29,8 @@
 
 <br>
 
-<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
-    <div fxFlex="60">
-        <div class="mat-elevation-z8">
+<div fxLayout="row" fxLayoutAlign="space-evenly" fxLayoutGap="20px">
+    <div fxFlex="100">
             <table mat-table [dataSource]="dataSource">
 
                 <!-- Position Column -->
@@ -62,13 +61,14 @@
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
 
-            <mat-paginator [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
+            <mat-paginator [pageSizeOptions]="[6, 12, 18]"></mat-paginator>
         </div>
-
-    </div>
-    <div fxFlex="40">
-        <app-widget-pie [data]="pieChart"></app-widget-pie>
-    </div>
+      <mat-card fxFlex="100">
+        <app-bmi-component></app-bmi-component>
+      </mat-card>
+    <!--<div fxFlex="40">
+       &lt;!&ndash; <app-widget-pie [data]="pieChart"></app-widget-pie>&ndash;&gt;
+    </div>-->
 </div>
 
 <br>
