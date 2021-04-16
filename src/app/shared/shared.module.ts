@@ -12,6 +12,8 @@ import { HighchartsChartModule } from 'highcharts-angular';
 import { CardComponent } from './widgets/card/card.component';
 import { PieComponent } from './widgets/pie/pie.component';
 import {BmiComponent} from './widgets/BMI/bmi.component';
+import {UpdateWeightComponent} from './widgets/update-weight/update-weight.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import {BmiComponent} from './widgets/BMI/bmi.component';
     AreaComponent,
     CardComponent,
     PieComponent,
-    BmiComponent
+    BmiComponent,
+    UpdateWeightComponent,
   ],
   imports: [
     CommonModule,
@@ -33,7 +36,8 @@ import {BmiComponent} from './widgets/BMI/bmi.component';
     MatMenuModule,
     MatListModule,
     RouterModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    ReactiveFormsModule
   ],
   exports: [
     HeaderComponent,
@@ -42,7 +46,8 @@ import {BmiComponent} from './widgets/BMI/bmi.component';
     AreaComponent,
     CardComponent,
     PieComponent,
-    BmiComponent
+    BmiComponent,
+    UpdateWeightComponent,
   ]
 })
 export class SharedModule { }

@@ -10,7 +10,8 @@ import {debounceTime, map, pluck} from 'rxjs/operators';
 export class BmiComponent implements OnInit {
   public BMI$: Observable<number>;
   public result$: Observable<string>;
-
+  saveBmi() {
+  }
   constructor() {
   }
 

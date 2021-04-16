@@ -22,33 +22,33 @@
   }
 
 </style>
-<div class="p-d-flex p-jc-center">
-  <div class="p-mr-2">
-    <b><h1>CHECK YOUR BMI <i class="pi pi-fw pi-sliders-v"></i></h1></b>
-    <div class="p-field p-grid">
-      <label for="height" class="p-col-fixed" style="width:120px">Height (cm)</label>
+<div>
+  <div>
+    <b><h1>CHECK YOUR BMI</h1></b>
+    <div>
+      <label for="height" style="width:120px">Height (cm)</label>
       <div class="p-col">
-        <input id="height" type="text" pInputText>
+        <input id="height" type="text" >
       </div>
     </div>
-    <div class="p-field p-grid">
-      <label for="weight" class="p-col-fixed" style="width:120px">Weight (kg)</label>
-      <div class="p-col">
-        <input id="weight" type="text" pInputText>
+    <div>
+      <label for="weight" style="width:120px">Weight (kg)</label>
+      <div>
+        <input id="weight" type="text" >
       </div>
     </div>
-    <div class="p-field p-grid">
-      <label class="p-col-fixed" style="width:120px">BMI</label>
-      <div class="p-col">
+    <div>
+      <label style="width:120px"><b>BMI</b></label>
+      <div>
         <label id="bmi">{{BMI$ | async}}</label>
       </div>
     </div>
-    <div class="p-field p-grid">
-      <label class="p-col-fixed" style="width:120px">range:</label>
-      <div class="p-col">
+    <div>
+      <label style="width:120px"><b>range:</b></label>
+      <div>
         <label>{{result$ | async}}</label>
       </div>
-    </div>
-
+    </div><br><br>
+    <button mat-raised-button color="primary" (click)="saveBmi()">Save</button>
   </div>
 </div>

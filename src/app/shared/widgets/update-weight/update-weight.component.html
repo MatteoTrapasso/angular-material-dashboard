@@ -1,0 +1,32 @@
+<style>
+  input[type=text], select {
+    width: 100%;
+    padding: 5px 5px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: large;
+  }
+
+  label {
+    font-size: large;
+  }
+
+</style>
+<div>
+  <div>
+    <b><h1>update your weight</h1></b>
+    <div>
+      <label style="width:120px">weight (Kg)</label>
+      <div>
+        <input type="text" [formControl]="weight">
+      </div>
+      {{ weight.value }} Kg
+    </div>
+    <p>
+      <button mat-raised-button color="primary" (click)="saveWeight()">Update!</button>
+    </p>
+  </div>
+</div>
