@@ -10,8 +10,12 @@ export class DashboardService {
   bigChart() {
     return [{
       name: 'BMI',
-      data: [25, 25.6, 27, 26.5, 26, 25.5]
-    }];
+      data: [25, 25.6, 27, 26.5]
+    },
+      {
+        name: 'Kg',
+        data: [100, 98, 97, 95]
+      }];
   }
 
   cards() {
