@@ -30,7 +30,7 @@ export class AreaComponent implements OnInit {
       },
       tooltip: {
         split: true,
-        valueSuffix: ' %'
+        valueSuffix: ''
       },
       credits: {
         enabled: false
