@@ -29,6 +29,7 @@ export class DashboardComponent implements OnInit {
   cards = [];
   pieChart = [];
 
+
   displayedColumns: string[] = ['name', 'value', 'unit'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
