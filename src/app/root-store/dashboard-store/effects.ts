@@ -31,7 +31,7 @@ import {
   selectResponse
 } from 'ngrx-entity-crud';
 import {repeat} from 'rxjs/operators';
-import {DashboardService} from '../../modules/dashboard.service';
+import {DashboardService} from '../../main/services/dashboard.service';
 import {Dashboard} from '../../main/models/vo/dashboard';
 
 @Injectable()
